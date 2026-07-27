@@ -20,7 +20,7 @@ const InfiniteScroll = (props) => {
   useEffect(() => {}, []);
 
   useEffect(() => {
-    console.log('Block eff')
+    // console.log('Block eff')
     window.addEventListener("scroll", () => {
       console.log("window scroll", window.scrollY);
     });
@@ -31,11 +31,11 @@ const InfiniteScroll = (props) => {
   }, [page]);
 
   useEffect(() => {
-    console.log('posts ', posts)
+    // console.log('posts ', posts)
   }, [posts]);
 
   useEffect(() => {
-   console.log("block data" , {page, posts});
+  //  console.log("block data" , {page, posts});
   }, [page, posts])
   
   
@@ -50,6 +50,7 @@ const InfiniteScroll = (props) => {
     let loadEl = document.getElementById('empty');
     let client = loadEl.getBoundingClientRect();
     
+    console.log({client, })
 
     if(client.top < 500) {
       setPage(page => page + 1);
